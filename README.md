@@ -1,4 +1,4 @@
 # csc290project
-Our group project for CSC290
+Connect 5 
 
-Project Plan due: Oct 13
+
