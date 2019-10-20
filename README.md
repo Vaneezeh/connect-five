@@ -1,4 +1,4 @@
-# csc290project
+# CSC290project
 Connect 5 
 
 
