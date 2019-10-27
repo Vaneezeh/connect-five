@@ -1,5 +1,7 @@
 import numpy as np
+import pygame
 
+#Global variables are signified through all caps
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
 
@@ -16,7 +18,8 @@ def drop_token(board, row, col, token):
     board[row][col] = token
 
 def is_valid_column(board, col):
-    return board[5][col] == 0 #checks that the row is not already filled to the top
+    #Check if column isn't already filled
+    return board[5][col] == 0
 
 def get_first_empty_row(board, col):
     for i in range(TOTAL_ROWS):
@@ -44,8 +47,21 @@ def won(board, token):
             if board[i][j] == token and  board[i + 1][j + 1] == token and board[i + 1][j + 2] == token and board[i + 3][j + 3] == token:
                 return True
     return False
-            
-            
+
+#Initialize pygame
+pygame.init()
+
+#Set size of each circle where a token can be dropped
+CIRCLE_SIZE = 100
+height = TOTAL_ROWS*CIRCLE_SIZE
+width = TOTAL_COLUMNS*CIRCLE_SIZE
+
+#Use Pygame documentation to determine method to use
+size = (width, height)
+screen = pygame.display.set_mode(size)
+
+
+
 while not game_over:
     if player == 0:
         col = int(input("Player 1, Selection (0-6):"))
