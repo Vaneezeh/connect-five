@@ -1,4 +1,4 @@
-# CSC290project
-Connect 5 
+# CSC290 Project
+A game of Connect 5, coded in Python
 
 
