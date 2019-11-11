@@ -68,23 +68,22 @@ while not game_over:
         if event.type == pygame.QUIT:
             sys.exit()
 
-    if player == 0:
-        col = int(input("Player 1, Selection (0-9):"))
+        if event.type == pygame.MOUSEBUTTONDOWN:
+            if player == 0:
+                col = int(input("Player 1, Selection (0-9):"))
 
-        if is_valid_column(board,col):
-            row = get_first_empty_row(board,col)
-            drop_token(board, row, col, 1)
+            if is_valid_column(board, col):
+                row = get_first_empty_row(board, col)
+                drop_token(board, row, col, 1)
 
-    else:
-        col = int(input("Player 2, Selection (0-9):"))
-        
-        if is_valid_column(board,col):
-            row = get_first_empty_row(board,col)
-            drop_token(board, row, col, 2)
+        else:
+            col = int(input("Player 2, Selection (0-9):"))
 
-    print_board(board)
-    
-    player += 1
-    player %= 2
+            if is_valid_column(board, col):
+                row = get_first_empty_row(board, col)
+                drop_token(board, row, col, 2)
 
-    
+        print_board(board)
+
+        player += 1
+        player %= 2
