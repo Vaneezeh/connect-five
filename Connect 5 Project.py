@@ -1,5 +1,6 @@
 import numpy as np
 import pygame
+import sys
 
 #Global variables are signified through all caps
 TOTAL_ROWS = 9
@@ -61,17 +62,21 @@ size = (width, height)
 screen = pygame.display.set_mode(size)
 
 
-
 while not game_over:
+
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            sys.exit()
+
     if player == 0:
-        col = int(input("Player 1, Selection (0-6):"))
+        col = int(input("Player 1, Selection (0-9):"))
 
         if is_valid_column(board,col):
             row = get_first_empty_row(board,col)
             drop_token(board, row, col, 1)
 
     else:
-        col = int(input("Player 2, Selection (0-6):"))
+        col = int(input("Player 2, Selection (0-9):"))
         
         if is_valid_column(board,col):
             row = get_first_empty_row(board,col)
