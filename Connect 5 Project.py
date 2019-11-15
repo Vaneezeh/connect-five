@@ -1,13 +1,12 @@
 import numpy as np
-import pygame
-import sys
+#import pygame
 
 #Global variables are signified through all caps
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
 
 def create_board():
-    board = np.zeros((9,10))
+    board = np.zeros((TOTAL_ROWS,TOTAL_COLUMNS))
     return board
 
 board = create_board()
@@ -20,7 +19,7 @@ def drop_token(board, row, col, token):
 
 def is_valid_column(board, col):
     #Check if column isn't already filled
-    return board[5][col] == 0
+    return board[TOTAL_ROWS - 1][col] == 0
 
 def get_first_empty_row(board, col):
     for i in range(TOTAL_ROWS):
@@ -31,26 +30,30 @@ def print_board(board):
     print(np.flip(board,0))
 
 def won(board, token):
-    for i in range (TOTAL_COLUMNS - 3):
+    #horizontal win
+    for i in range (TOTAL_COLUMNS - 4):
         for j in range (TOTAL_ROWS):
-            if board[i][j] == token and  board[i][j + 1] == token and board[i][j + 2] == token and board[i][j + 3] == token:
+            if board[j][i] == token and  board[j][i + 1] == token and board[j][i + 2] == token and board[j][i + 3] == token and board[j][i + 4] == token:
                 return True
+    #vertical win
     for i in range (TOTAL_COLUMNS):
-        for j in range (TOTAL_ROWS - 3):
-            if board[i][j] == token and  board[i][j + 1] == token and board[i][j + 2] == token and board[i][j + 3] == token:
+        for j in range (TOTAL_ROWS -4):
+            if board[j][i] == token and  board[j + 1][i] == token and board[j + 2][i] == token and board[j + 3][i] == token and board[j + 4][i] == token:
                 return True
-    for i in range (TOTAL_COLUMNS - 3):
-        for j in range (TOTAL_ROWS - 3):
-            if board[i][j] == token and  board[i + 1][j + 1] == token and board[i + 1][j + 2] == token and board[i + 3][j + 3] == token:
+    #positive diagonal slope
+    for i in range (TOTAL_COLUMNS - 4):
+        for j in range (TOTAL_ROWS -4):
+            if board[j][i] == token and  board[j + 1][i + 1] == token and board[j + 2][i + 2] == token and board[j + 3][i + 3] == token and board[j + 4][i + 4] == token:
                 return True
-    for i in range (TOTAL_COLUMNS - 3):
-        for j in range (TOTAL_ROWS - 3):
-            if board[i][j] == token and  board[i + 1][j + 1] == token and board[i + 1][j + 2] == token and board[i + 3][j + 3] == token:
+    #negative diagonal slope
+    for i in range (TOTAL_COLUMNS):
+        for j in range (4, TOTAL_ROWS -4):
+            if board[j][i] == token and  board[j - 1][i + 1] == token and board[j - 2][i + 2] == token and board[j - 3][i + 3] == token and board[j - 4][i + 4] == token:
                 return True
-    return False
+
 
 #Initialize pygame
-pygame.init()
+#pygame.init()
 
 #Set size of each circle where a token can be dropped
 CIRCLE_SIZE = 100
@@ -59,31 +62,39 @@ width = TOTAL_COLUMNS*CIRCLE_SIZE
 
 #Use Pygame documentation to determine method to use
 size = (width, height)
-screen = pygame.display.set_mode(size)
+#screen = pygame.display.set_mode(size)
+
 
 
 while not game_over:
+    if player == 0:
+        col = int(input("Player 1, Selection (0-10):"))
 
-    for event in pygame.event.get():
-        if event.type == pygame.QUIT:
-            sys.exit()
+        if is_valid_column(board,col):
+            row = get_first_empty_row(board,col)
+            drop_token(board, row, col, 1)
 
-        if event.type == pygame.MOUSEBUTTONDOWN:
-            if player == 0:
-                col = int(input("Player 1, Selection (0-9):"))
+            if won(board, 1):
+                print("Player 1 wins")
+                game_over = True
+                break
+        
+    else:
+        col = int(input("Player 2, Selection (0-10):"))
+        
+        if is_valid_column(board,col):
+            row = get_first_empty_row(board,col)
+            drop_token(board, row, col, 2)
 
-            if is_valid_column(board, col):
-                row = get_first_empty_row(board, col)
-                drop_token(board, row, col, 1)
+            if won(board, 2):
+                print("Player 2 wins")
+                game_over = True
+                break
+            
 
-        else:
-            col = int(input("Player 2, Selection (0-9):"))
+    print_board(board)
+    
+    player += 1
+    player %= 2
 
-            if is_valid_column(board, col):
-                row = get_first_empty_row(board, col)
-                drop_token(board, row, col, 2)
-
-        print_board(board)
-
-        player += 1
-        player %= 2
+    
