@@ -13,7 +13,7 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ###### [Authors](https://github.com/Vaneezeh/connect-five/blob/master/README.md#authors-1)
 
-###### Licensing Information
+###### [Licensing Information](https://github.com/Vaneezeh/connect-five/blob/master/README.md#licensing-information-1)
 
 ## Game Description
 
