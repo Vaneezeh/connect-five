@@ -13,6 +13,18 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ###### Authors 
 
+###### Licensing Information
+
+## Game Description
+
+## Game Features
+
+## How to Install Connect Five
+
+## Documentation
+
+## Authors 
+
 This version of Connect Five was created by a group of statistics and computer science students at the University of Toronto Mississauga. This project was done for credit for the course, CSC290: Communication Skills for Computer Scientists. Group members as well as their individual contributions, are listed below: 
 
 **Vaneezeh Siddiqui**
@@ -21,8 +33,5 @@ This version of Connect Five was created by a group of statistics and computer s
 
 **Charles Jacob Tan**
 
-
-
-###### Licensing Information
-
+## Licensing Information
 
