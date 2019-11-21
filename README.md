@@ -1,5 +1,5 @@
-# CSC290 Project
-A game of Connect 5, coded in Python using the Pygame library
+# Connect Five
+A game of Connect Five, coded in Python using the Pygame library
 
 ## Navigation
 
@@ -12,6 +12,16 @@ A game of Connect 5, coded in Python using the Pygame library
 ###### Documentation
 
 ###### Authors 
+
+This version of Connect Five was created by a group of statistics and computer science students at the University of Toronto Mississauga. This project was done for credit for the course, CSC290: Communication Skills for Computer Scientists. Group members as well as their individual contributions, are listed below: 
+
+**Vaneezeh Siddiqui**
+
+**Nima Hashi**
+
+**Charles Jacob Tan**
+
+
 
 ###### Licensing Information
 
