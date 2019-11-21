@@ -3,7 +3,7 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ## Navigation
 
-###### Game Description
+###### [Game Description](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-description-1)
 
 ###### Game Features
 
