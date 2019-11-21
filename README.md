@@ -5,7 +5,7 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ###### [Game Description](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-description-1)
 
-###### Game Features
+###### [Game Features](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-features-1)
 
 ###### How to Install Connect Five
 
