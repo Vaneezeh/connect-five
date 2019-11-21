@@ -37,3 +37,9 @@ I was responsible for creating the GUI for this project. From developing the des
 
 ## Licensing Information
 
+Connect Five is licensed under the MIT License (MIT)
+
+Copyright © 2019 Connect Five
+
+You can find a copy of the License at https://opensource.org/licenses/MIT
+
