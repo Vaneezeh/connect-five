@@ -4,6 +4,8 @@ import sys
 
 #Global variables are signified through all caps
 GREEN = (93,148,81)
+WHITE = (255,255,255)
+
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
 
@@ -58,7 +60,7 @@ def make_board(board):
     for i in range (TOTAL_COLUMNS):
         for j in range (TOTAL_ROWS):
             pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE+CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
-
+            pygame.draw.circle(screen, WHITE, (int(i*CIRCLE_SIZE+CIRCLE_SIZE/2), int(j*CIRCLE_SIZE+CIRCLE_SIZE+CIRCLE_SIZE/2)), radius)
 #Initialize pygame
 pygame.init()
 
@@ -71,6 +73,8 @@ width = TOTAL_COLUMNS*CIRCLE_SIZE
 
 #Use Pygame documentation to determine method to use
 size = (width, height)
+
+radius = int(CIRCLE_SIZE/2 - 10) #Subtract so it's smaller than the outer rectangle
 screen = pygame.display.set_mode(size)
 
 make_board(board)
