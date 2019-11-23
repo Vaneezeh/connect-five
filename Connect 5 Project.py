@@ -67,6 +67,8 @@ width = TOTAL_COLUMNS*CIRCLE_SIZE
 size = (width, height)
 screen = pygame.display.set_mode(size)
 
+#Function to create GUI
+def make_board(board):
 
 
 while not game_over:
