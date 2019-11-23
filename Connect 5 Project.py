@@ -58,7 +58,9 @@ pygame.init()
 
 #Set size of each circle where a token can be dropped
 CIRCLE_SIZE = 100
-height = TOTAL_ROWS*CIRCLE_SIZE
+
+#Creates a row for user to move piece along the top of the board
+height = (TOTAL_ROWS+1)*CIRCLE_SIZE
 width = TOTAL_COLUMNS*CIRCLE_SIZE
 
 #Use Pygame documentation to determine method to use
