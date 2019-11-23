@@ -3,6 +3,7 @@ import pygame
 import sys
 
 #Global variables are signified through all caps
+GREEN = (93,148,81)
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
 
@@ -52,6 +53,11 @@ def won(board, token):
             if board[j][i] == token and  board[j - 1][i + 1] == token and board[j - 2][i + 2] == token and board[j - 3][i + 3] == token and board[j - 4][i + 4] == token:
                 return True
 
+#Function to create GUI
+def make_board(board):
+    for i in range (TOTAL_COLUMNS):
+        for j in range (TOTAL_ROWS):
+            pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
 
 #Initialize pygame
 pygame.init()
@@ -67,9 +73,8 @@ width = TOTAL_COLUMNS*CIRCLE_SIZE
 size = (width, height)
 screen = pygame.display.set_mode(size)
 
-#Function to create GUI
-def make_board(board):
-
+make_board(board)
+pygame.display.update()
 
 while not game_over:
 
