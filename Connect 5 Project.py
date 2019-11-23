@@ -57,7 +57,7 @@ def won(board, token):
 def make_board(board):
     for i in range (TOTAL_COLUMNS):
         for j in range (TOTAL_ROWS):
-            pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
+            pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE+CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
 
 #Initialize pygame
 pygame.init()
