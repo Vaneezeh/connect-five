@@ -65,7 +65,7 @@ def make_board(board):
 pygame.init()
 
 #Set size of each circle where a token can be dropped
-CIRCLE_SIZE = 100
+CIRCLE_SIZE = 70
 
 #Creates a row for user to move piece along the top of the board
 height = (TOTAL_ROWS+1)*CIRCLE_SIZE
@@ -87,7 +87,7 @@ while not game_over:
             sys.exit()
 
     if event.type == pygame.MOUSEBUTTONDOWN:
-
+        print (event.pos)
         if player == 0:
             col = int(input("Player 1, Selection (0-10):"))
 
