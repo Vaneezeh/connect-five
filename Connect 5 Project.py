@@ -1,10 +1,12 @@
 import numpy as np
 import pygame
 import sys
+import math
 
 #Global variables are signified through all caps
 GREEN = (93,148,81)
 WHITE = (255,255,255)
+BLUE = (173, 216, 230)
 
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
@@ -60,7 +62,11 @@ def make_board(board):
     for i in range (TOTAL_COLUMNS):
         for j in range (TOTAL_ROWS):
             pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE+CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
-            pygame.draw.circle(screen, WHITE, (int(i*CIRCLE_SIZE+CIRCLE_SIZE/2), int(j*CIRCLE_SIZE+CIRCLE_SIZE+CIRCLE_SIZE/2)), radius)
+            if board[i][j] == 0:
+                pygame.draw.circle(screen, WHITE, (int(i*CIRCLE_SIZE+CIRCLE_SIZE/2), int(j*CIRCLE_SIZE+CIRCLE_SIZE+CIRCLE_SIZE/2)), radius)
+            elif board[i][j] == 1:
+                pygame.draw.circle(screen, BLUE , (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
+
 #Initialize pygame
 pygame.init()
 
@@ -87,9 +93,11 @@ while not game_over:
             sys.exit()
 
     if event.type == pygame.MOUSEBUTTONDOWN:
-        print (event.pos)
+        #print (event.pos)
         if player == 0:
-            col = int(input("Player 1, Selection (0-10):"))
+            position_x = event.pos[0]
+            col = int(math.floor(position_x/CIRCLE_SIZE))
+            #col = int(input("Player 1, Selection (0-10):"))
 
             if is_valid_column(board,col):
                 row = get_first_empty_row(board,col)
@@ -101,7 +109,9 @@ while not game_over:
                     break
         
         else:
-            col = int(input("Player 2, Selection (0-10):"))
+            position_x = event.pos[0]
+            col = int(math.floor(position_x / CIRCLE_SIZE))
+            #col = int(input("Player 2, Selection (0-10):"))
         
             if is_valid_column(board,col):
                 row = get_first_empty_row(board,col)
