@@ -63,10 +63,16 @@ def make_board(board):
     for i in range (TOTAL_COLUMNS):
         for j in range (TOTAL_ROWS):
             pygame.draw.rect(screen, GREEN, (i*CIRCLE_SIZE, j*CIRCLE_SIZE+CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
-            if board[i][j] == 0:
+            if board[j][i] == 0:
                 pygame.draw.circle(screen, WHITE, (int(i*CIRCLE_SIZE+CIRCLE_SIZE/2), int(j*CIRCLE_SIZE+CIRCLE_SIZE+CIRCLE_SIZE/2)), radius)
-            elif board[i][j] == 1:
-                pygame.draw.circle(screen, BLUE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
+            elif board[j][i] == 1:
+                pygame.draw.circle(screen, BLUE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), height-int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
+            else:
+                pygame.draw.circle(screen, ORANGE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), height-int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
+    pygame.display.update()
+
+
+
 
 #Initialize pygame
 pygame.init()
@@ -125,6 +131,7 @@ while not game_over:
             
 
     print_board(board)
+    make_board(board)
     
     player += 1
     player %= 2
