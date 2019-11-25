@@ -68,7 +68,7 @@ def make_board(board):
         for j in range(TOTAL_ROWS):
             if board[j][i] == 1:
                 pygame.draw.circle(screen, BLUE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), height - int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
-            else:
+            elif board[j][i] == 2:
                 pygame.draw.circle(screen, ORANGE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), height - int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
     pygame.display.update()
 
