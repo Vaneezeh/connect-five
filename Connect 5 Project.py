@@ -7,6 +7,7 @@ import math
 GREEN = (93,148,81)
 WHITE = (255,255,255)
 BLUE = (173, 216, 230)
+ORANGE = (254,216,177)
 
 TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
@@ -65,7 +66,7 @@ def make_board(board):
             if board[i][j] == 0:
                 pygame.draw.circle(screen, WHITE, (int(i*CIRCLE_SIZE+CIRCLE_SIZE/2), int(j*CIRCLE_SIZE+CIRCLE_SIZE+CIRCLE_SIZE/2)), radius)
             elif board[i][j] == 1:
-                pygame.draw.circle(screen, BLUE , (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
+                pygame.draw.circle(screen, BLUE, (int(i * CIRCLE_SIZE + CIRCLE_SIZE / 2), int(j * CIRCLE_SIZE + CIRCLE_SIZE + CIRCLE_SIZE / 2)), radius)
 
 #Initialize pygame
 pygame.init()
