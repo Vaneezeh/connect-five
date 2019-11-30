@@ -30,6 +30,29 @@ Connect 5 requires two players for the game to operate. Player 1 starts off by d
 
 ## Documentation
 
+Below you'll see the documnenation of all the methods used in Connect 5.
+
+def create_board():
+  Creates the board (9x10 grid) for the players to play on. 
+   
+def drop_token(board, row, col, token):
+  Drop the token at the row and col position the player chooses.
+  
+def is_valid_column(board, col):
+  Check to see if the spot the player chose is empty or not.
+   
+def get_first_empty_row(board, col):
+  Return the digit of the first empty row in the col the player chose to drop their token.
+
+def print_board(board):
+  Print the board at its current position.
+ 
+def won(board, token):
+  Checks to see if the player has 5 tokens in a row or not.
+
+Main:
+  While there is still empty spots for the players to drop their tokens in, we manually switch the players turn between the     two, starting with player 1. Whenever a player drops a token in a column, we check to see if they got 5 tokens in a row, if   so then that player won the game and we end it. If not, then we switch to the next players turn until we get to a spot where   there is a winner or there are no moves left.
+
 ## Authors 
 
 This version of Connect Five was created by a group of statistics and computer science students at the University of Toronto Mississauga. This project was done for credit for the course, CSC290: Communication Skills for Computer Scientists. Group members as well as their individual contributions, are listed below: 
