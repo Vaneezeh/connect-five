@@ -67,7 +67,7 @@ I was put in charge of the won method and how the game would terminate if there 
 
 **Charles Jacob Tan**
 
-Throughout this game's development process, I was fundamentally in charge of implementing the structure of the game and cleaning up any residual bugs and issues that were left from my teammates whether it be minimal or substantial. This also includes ensuring that our different coding styles meshed well together and exhibited strong signs of consistency. I had to  finally verify that each one of us executed proper code practices and that there would be a good semblance of code clarity after every subsequent commit. Once the game was fully functional and the coding stages were complete, I was responsible for adding doc strings to the main functions of the game. (Add README contribution next).  
+Throughout this game's development process, I was fundamentally in charge of implementing the structure of the game and cleaning up any residual bugs and issues that were left from my teammates whether it be minimal or substantial. This also includes ensuring that our different coding styles meshed well together and exhibited strong signs of consistency. I had to  finally verify that each one of us executed proper code practices and that there would be a good semblance of code clarity after every subsequent commit. Once the game was fully functional and the coding stages were complete, I was responsible for adding doc strings to the main functions of the game. Within the README file, I edited the wiki by adding to the "Directory Structure" section and stating a few more details to the "How to extend the game" options. 
 
 ## Licensing Information
 
