@@ -5,7 +5,9 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ###### [Game Description](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-description-1)
 
-###### [Game Features](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-features-1)
+###### [Gameplay](https://github.com/Vaneezeh/connect-five/blob/master/README.md#gameplay-1)
+
+###### [Game Controls and Features](https://github.com/Vaneezeh/connect-five/blob/master/README.md#game-features-1)
 
 ###### [How to Install Connect Five](https://github.com/Vaneezeh/connect-five/blob/master/README.md#how-to-install-connect-five-1)
 
@@ -20,9 +22,9 @@ A game of Connect Five, coded in Python using the Pygame library
 Connect 5 requires two players for the game to operate. Player 1 starts off by dropping a token in an available column. Player 2 then drops a token in another available column. The two players interchange turns until one of the players gets 5 tokens in a row (the row can be in any direction, diagonals included). The game ends when a player got 5 tokens in a row, or both players have no more spots to drop a token in. The winner of the game is the first player to get to 5 tokens in a row first.
 
 ## Gameplay
-![gameplay of connect 5](https://user-images.githubusercontent.com/37009618/69930615-32e6f900-1492-11ea-8a2a-ce18bafe1d5a.gif)
+![high rez ](https://user-images.githubusercontent.com/37009618/69932587-af310a80-1499-11ea-9b87-c7d5d258e0a8.gif)
 
-<img width="576" alt="Screen Shot 2019-12-01 at 11 48 26 PM" src="https://user-images.githubusercontent.com/37009618/69931423-3334c380-1495-11ea-9df2-b804d2678965.png">
+<img width="573" alt="Screen Shot 2019-12-02 at 12 11 06 AM" src="https://user-images.githubusercontent.com/37009618/69932267-5dd44b80-1498-11ea-8c43-05d93e3742da.png">
 
 ## Game Controls and Features
 All gameplay is controlled by mouse input. 
