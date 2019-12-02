@@ -19,8 +19,19 @@ A game of Connect Five, coded in Python using the Pygame library
 
 Connect 5 requires two players for the game to operate. Player 1 starts off by dropping a token in an available column. Player 2 then drops a token in another available column. The two players interchange turns until one of the players gets 5 tokens in a row (the row can be in any direction, diagonals included). The game ends when a player got 5 tokens in a row, or both players have no more spots to drop a token in. The winner of the game is the first player to get to 5 tokens in a row first.
 
-## Game Features
+## Gameplay
+![gameplay of connect 5](https://user-images.githubusercontent.com/37009618/69930615-32e6f900-1492-11ea-8a2a-ce18bafe1d5a.gif)
 
+<img width="577" alt="Screen Shot 2019-12-01 at 11 25 59 PM" src="https://user-images.githubusercontent.com/37009618/69930738-9a04ad80-1492-11ea-89a3-d9aed19e3d67.png">
+
+## Game Controls and Features
+All gameplay is controlled by mouse input. 
+
+The game screen contains a 9 by 10 board.
+* Use your mouse to hover over the column you wish to drop the token in. 
+* Build 5 tokens in a row before your opponents does. 
+
+The game will congratulate and automatically terminate once 5 tokens in a row of the same colour has been detected. 
 ## How to Install Connect Five
 
 1) Go to https://github.com/Vaneezeh/connect-five 
@@ -46,7 +57,7 @@ I was put in charge of the won method and how the game would terminate if there 
 
 **Charles Jacob Tan**
 
-Throughout this game's development process, I was fundamentally in charge of implementing the structure of the game and cleaning up any residual bugs and issues that were left from my teammates whether it be minimal or substantial. This also includes ensuring that our different coding styles meshed well together and exhibited strong signs of consistency. I had to  finally verify that each one of us executed proper code practices and that there would be a good semblance of code clarity after every subsequent commit. Once the game was fully functional and the coding stages were complete, I was responsible for adding doc strings to the main functions of the game. Within the README file, I edited the wiki by adding to the "Directory Structure" section and stating a few more details to the "How to extend the game" options. 
+Throughout this game's development process, I was fundamentally in charge of implementing the structure of the game and cleaning up any residual bugs and issues that were left from my teammates whether it be minimal or substantial. This also includes ensuring that our different coding styles meshed well together and exhibited strong signs of consistency. I had to  finally verify that each one of us executed proper code practices and that there would be a good semblance of code clarity after every subsequent commit. Once the game was fully functional and the coding stages were complete, I was responsible for adding doc strings to the main functions of the game. Within the README file, I was in charge of both the "Gameplay" and "Game Controls and Features" sections. I also edited the wiki by adding to the "Directory Structure" section and stating a few more details to the "How to extend the game" options. 
 
 ## Licensing Information
 
