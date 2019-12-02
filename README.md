@@ -22,7 +22,7 @@ Connect 5 requires two players for the game to operate. Player 1 starts off by d
 ## Gameplay
 ![gameplay of connect 5](https://user-images.githubusercontent.com/37009618/69930615-32e6f900-1492-11ea-8a2a-ce18bafe1d5a.gif)
 
-<img width="577" alt="Screen Shot 2019-12-01 at 11 25 59 PM" src="https://user-images.githubusercontent.com/37009618/69930738-9a04ad80-1492-11ea-89a3-d9aed19e3d67.png">
+<img width="576" alt="Screen Shot 2019-12-01 at 11 48 26 PM" src="https://user-images.githubusercontent.com/37009618/69931423-3334c380-1495-11ea-9df2-b804d2678965.png">
 
 ## Game Controls and Features
 All gameplay is controlled by mouse input. 
