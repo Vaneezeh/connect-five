@@ -19,7 +19,9 @@ A game of Connect Five, coded in Python using the Pygame library
 
 ## Game Description
 
-Connect 5 requires two players for the game to operate. Player 1 starts off by dropping a token in an available column. Player 2 then drops a token in another available column. The two players interchange turns until one of the players gets 5 tokens in a row (the row can be in any direction, diagonals included). The game ends when a player got 5 tokens in a row, or both players have no more spots to drop a token in. The winner of the game is the first player to get to 5 tokens in a row first.
+Connect 5 uses a 9 x 10 board and requires two players to be properly played. Player 1 will be dropping golden tokens whilst player 2 will be dropping blue tokens.
+
+Player 1 starts by dropping a token in any column he/she wishes then Player 2 must do the same. The two players take turns until one of the players forms 5 tokens in a row in any direction: vertically, horizontally and diagonally. The game ends when this occurs or when both players have no more spots to drop a token in. The first player to form 5 tokens in a row first is declared the winner. 
 
 ## Gameplay
 ![high rez ](https://user-images.githubusercontent.com/37009618/69932587-af310a80-1499-11ea-9b87-c7d5d258e0a8.gif)
