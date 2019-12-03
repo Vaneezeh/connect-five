@@ -15,25 +15,94 @@ TOTAL_ROWS = 9
 TOTAL_COLUMNS = 10
 
 def create_board():
+    """
+    Creates a nested list of zeros with the dimensions of the nested list
+    being TOTAL_ROWS by TOTAL_COLUMNS.
+
+    Args:
+        None
+
+    Returns:
+        None
+    """
     board = np.zeros((TOTAL_ROWS,TOTAL_COLUMNS))
     return board
 
 def drop_token(board, row, col, token):
+    """
+    Inserts a token (with values either a 1 or 2) into the given row and column indexes.
+
+    Args:
+        board: the game board, a nested list of zeros
+        row (int): the row where the token will be inserted into
+        col (int): the column where the token will be inserted into
+        token (int): the token used to denote either player 1 or player 2
+
+    Returns:
+        None
+        
+    """
     board[row][col] = token
 
-def is_valid_column(board, col):
-    #Check if column isn't already filled
+def is_valid_column(board, col): 
+    """
+    Returns a boolean stating whether or not the column is already filled to the top
+    to prevent further insertion. 
+
+    Args:
+        board: the game board, a nested list of zeros
+        col (int): the column where the token will be inserted into
+
+    Returns:
+        boolean
+        
+    """
     return board[TOTAL_ROWS - 1][col] == 0
 
 def get_first_empty_row(board, col):
+    """
+    Returns an integer of the row where the token will be dropped
+    for the chosen column. 
+
+    Args:
+        board: the game board, a nested list of zeros
+        col (int): the column where the token will be inserted into
+
+    Returns:
+        int
+        
+    """
     for i in range(TOTAL_ROWS):
         if board[i][col] == 0:
             return i
 
 def print_board(board):
+    """
+    Flips the board upside down to fix original numpy board appearance.
+
+    Args:
+        board: the game board, a nested list of zeros
+
+    Returns:
+        None
+        
+    """
     print(np.flip(board,0))
 
 def won(board, token):
+    """
+    Returns a boolean as to whether or not either player achieved
+    a win condition by forming one of the three possible token alignments:
+    vertical, horizontal, diagonal.
+
+    Args:
+        board: the game board, a nested list of zeros
+        token (int): the token used to denote either player 1 or player 2
+
+    Returns:
+        boolean
+        
+    """
     #horizontal win
     for i in range (TOTAL_COLUMNS - 4):
         for j in range (TOTAL_ROWS):
@@ -50,13 +119,23 @@ def won(board, token):
             if board[j][i] == token and  board[j + 1][i + 1] == token and board[j + 2][i + 2] == token and board[j + 3][i + 3] == token and board[j + 4][i + 4] == token:
                 return True
     #negative diagonal win
-    for i in range (TOTAL_COLUMNS):
+    for i in range (TOTAL_COLUMNS -4):
         for j in range (4, TOTAL_ROWS -4):
             if board[j][i] == token and  board[j - 1][i + 1] == token and board[j - 2][i + 2] == token and board[j - 3][i + 3] == token and board[j - 4][i + 4] == token:
                 return True
 
 #Function to create GUI
 def make_board(board):
+    """
+    Creates the GUI representation of the game board. 
+
+    Args:
+        board: the game board, a nested list of zeros
+
+    Returns:
+        None
+        
+    """
     for i in range (TOTAL_COLUMNS):
         for j in range (TOTAL_ROWS):
             pygame.draw.rect(screen, BOARD_COLOUR, (i*CIRCLE_SIZE, j*CIRCLE_SIZE+CIRCLE_SIZE, CIRCLE_SIZE, CIRCLE_SIZE))
@@ -96,6 +175,7 @@ pygame.display.update()
 
 win_font = pygame.font.SysFont("Comic Sans MS", 75)
 
+#Main Game Loop
 while not game_over:
 
     for event in pygame.event.get():
@@ -126,7 +206,6 @@ while not game_over:
                         print("Player 1 wins")
                         game_over = True
                         
-        
             else:
                 position_x = event.pos[0]
                 col = int(math.floor(position_x / CIRCLE_SIZE))
