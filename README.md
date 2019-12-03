@@ -38,10 +38,16 @@ The game screen contains a 9 by 10 board.
 The game will congratulate and automatically terminate once 5 tokens in a row of the same colour has been detected. 
 ## How to Install Connect Five
 
-1) Go to https://github.com/Vaneezeh/connect-five 
-2) Click on the green button on the right hand side which says ‘Clone or download’.
+1) Go to https://github.com/Vaneezeh/connect-five
+2) Click on the green button on the right hand side which says ‘Clone or download’ (Shown below).
+
+![Screen Shot 2019-11-25 at 6 36 21 PM](https://user-images.githubusercontent.com/56306648/70007639-1785f780-153f-11ea-9f18-ddfb492ea56b.png)
+
 3) Download the zip file
-4) Open Python and run the game
+4) Open Python and run the game!
+
+![Screen Shot 2019-11-25 at 6 39 26 PM](https://user-images.githubusercontent.com/56306648/70007731-6af84580-153f-11ea-984a-f3c5acca0fb2.png)
+
 
 ## Documentation
 
